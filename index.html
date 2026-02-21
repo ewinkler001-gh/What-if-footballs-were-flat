@@ -24,15 +24,60 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "What If Footballs Were Flat?",
-  "author": {
-    "@type": "Person",
-    "name": "Eric R Winkler"
-  },
-  "description": "A funny football children's book filled with imagination, alliteration, and sports adventure.",
-  "inLanguage": "en",
-  "genre": "Children's Book"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://flatfootballs.com/#organization",
+      "name": "Flat Footballs",
+      "url": "https://flatfootballs.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://flatfootballs.com/#author",
+      "name": "Eric R. Winkler",
+      "url": "https://flatfootballs.com/about",
+      "jobTitle": "Author",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Purdue University"
+      },
+      "knowsAbout": [
+        "Football",
+        "Sports fiction",
+        "Midwest culture",
+        "Poetry",
+        "Short stories"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://flatfootballs.com/#book",
+      "name": "Flat Footballs",
+      "author": {
+        "@id": "https://flatfootballs.com/#author"
+      },
+      "publisher": {
+        "@id": "https://flatfootballs.com/#organization"
+      },
+      "datePublished": "2026",
+      "inLanguage": "en",
+      "genre": [
+        "Sports Fiction",
+        "Football Literature",
+        "Inspirational Fiction"
+      ],
+      "description": "Flat Footballs is a collection of football-inspired stories and reflections rooted in Midwest life. Written by Eric R. Winkler, the book blends sports, character, and storytelling beyond the field.",
+      "url": "https://flatfootballs.com",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.amazon.com/dp/B0GKPH848T?dplnkId=1e7ed582-08de-43d8-97b0-89ab7036e065&dplnkId=df148cee-f800-483f-8d5f-b1639ebe6854",
+        "priceCurrency": "USD",
+        "isbn": "979-8243622455",
+        "image": "Images/1_20260111_223747_0000.png",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
 }
 </script>
 
